@@ -1,9 +1,9 @@
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
-var passwordText = document.querySelector("password");
-var length = document.querySelector("length");
-var incNumbers = document.querySelector("numbers");
-var incSymbols = document.querySelector("symbols");
+//var passwordText = document.querySelector("password");
+//var length = document.querySelector("length");
+//var incNumbers = document.querySelector("numbers");
+//var incSymbols = document.querySelector("symbols");
 
 //var numbers = "0123456789";
 //var symbols = "!@#$%^&*()_+-="
@@ -17,8 +17,8 @@ var incSymbols = document.querySelector("symbols");
 
 function generatePassword(){
   console.log("Yay! You clicked the button!")
-  var passwordLength = prompt("How long do you want your password to be?")
-  let text = "Do you want to include numbers in your password?";
+  let passwordLength = prompt("How long do you want your password to be?")
+  let text =  confirm("Do you want to include numbers in your password?");
   let symbols = "Do you want to include symbols in you password?";
   let lower = "Do you want to include lower case in your password?";
   let upper = "do you want to include upper case in you password?";
@@ -26,7 +26,7 @@ function generatePassword(){
     document.querySelector("#password").innerHTML = "Password"
   }
  
-  if (confirm(text)== true);{
+  if (alert(text)); {
 }
 if (confirm(symbols)== true);{
 
@@ -39,11 +39,6 @@ if (confirm(upper)== true);{
 }
   return "Generated password will go here";
 }
-
-//function incNumbers(){
-  //let text = "Do you want numbers in your password?";
-  //if (confirm(text)== true);
-
 
 // Write password to the #password input
 function writePassword() {
