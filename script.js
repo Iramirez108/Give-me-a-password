@@ -14,7 +14,7 @@ var specialChar = "!#$%&'()*+-./:;<=>?@[\^_`{|}~";
 function generatePassword(){
   console.log("Yay! You clicked the button!")
   var password = "";
-  var passwordChar = ""
+  var passwordChar = "";
   let passwordLengthUser = prompt("How long do you want your password to be?");
   passwordLengthUser = parseInt(passwordLengthUser);
   if (passwordLengthUser <8){
@@ -44,35 +44,16 @@ function generatePassword(){
   for (var i=0;i<passwordLengthUser; i++){
     password = passwordChar[Math.floor(Math.random()*passwordChar.length)]
   }
+  return password
 }
 
 
-  //let text = ("Do you want to include numbers in your password?");
-  //let symbols = "Do you want to include symbols in you password?";
-  //let lower = "Do you want to include lower case in your password?";
-  //let upper = "do you want to include upper case in you password?";
-  //if (passwordLength !=null){
-    //document.querySelector("#password").innerHTML = "Password"
-  //}
  
-  //if (confirm(text)==true); {
-//}
-//if (confirm(symbols)== true);{
-
-//}
-//if (confirm(lower)== true);{
-
-//}
-//if (confirm(upper)== true);{
-
-//}
-  //return "Generated password will go here";
-//}
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password").value;
+  var passwordText = document.querySelector("#password");
   passwordText.value = password;
 
   if (passwordText !=null){
@@ -80,6 +61,7 @@ function writePassword() {
  // document.querySelector("password").innerHTML = password;
 }
 }
+
 
 
 // Add event listener to generate button
