@@ -37,7 +37,7 @@ var specialChar = [
   // Display generated password on the page or alert)
 
   function getRandom(arr) {
-   
+ 
   }
 
 
@@ -82,7 +82,7 @@ function generatePassword(){
   for (var i=0;i<passwordLengthUser; i++){
     password = passwordChar[Math.floor(Math.random()*passwordChar.length)]
   }
-  return password.join();
+  return password.join('');
 }
 
 
